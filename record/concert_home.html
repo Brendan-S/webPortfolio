@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.js" integrity="sha256-B/HdsqG8ejlPGk/2bEOHlCBCAcBynY0nmh9hrhOwqtQ=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400&display=swap" rel="stylesheet">
+  
+</head>
+
+<style>
+body{
+	width:100%;
+	height:100vh;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+/*.contentblock{
+	position:relative;
+margin:0;
+padding:0;
+width:100%;
+height:40rem;
+background-color: black;
+
+
+}*/
+
+a {
+
+  color:#FFFFFF;
+  text-decoration:none;
+  -webkit-transition:hue, ease-in .5s;
+
+ }
+
+ a:hover{
+ 	color:#FC28FF;
+	cursor: pointer;
+ }
+
+.canvas {
+  display: block;
+  z-index: -4;
+}
+
+/*.menu{
+	position:fixed;
+	display:block;
+	background-color: #000000;
+	stroke color:#ffffff; 
+	stroke-width: 2px;
+	width:10rem;
+	height:100rem;,
+	z-index: 3;
+}*/
+
+.record{
+		position: absolute;
+		display:block;
+		cursor: pointer;
+		font-family:'Roboto', sans-serif; 
+		color: #ffffff;
+		font-size:8rem;
+		z-index: +8;
+
+		-webkit-transition: hue, ease-in .5s;
+}
+
+.record:hover {
+
+	color:#FF00E6;
+	cursor: pointer;
+
+}
+
+.your{
+
+	position:absolute;
+	display:block;
+	font-family:'Roboto', sans-serif; 
+	color: #ffffff;
+	font-size:8rem;
+	z-index: +8;
+	top:25rem;
+
+}
+
+.your:hover{
+	color:#F7EF44;
+}
+
+.e{
+
+	position:absolute;
+	display:block;
+	font-family:'Roboto', sans-serif; 
+	color: #ffffff;
+	font-size:8rem;
+	z-index: +8;
+	top:40rem;
+
+}
+
+.e:hover{
+
+	color:#33DEF3
+
+}
+
+
+
+
+
+
+.upload{
+	
+	position: absolute;
+	font-family:'Roboto', sans-serif;
+	color: #ffffff;
+	letter-spacing: .095rem;
+	font-size:10rem;
+	left:0.5rem;
+	top:10rem;
+
+}
+
+.block{
+
+	position:fixed;
+	display:block;
+	margin:0;
+	padding:auto;
+	top:-50%; 
+  	left:-50%; 
+	height:200%;
+	width:200%;
+	background-color: #000000;
+
+	z-index: -3;
+}
+
+
+</style>
+
+<body>
+<!--<div class=contentblock>-->
+
+<!--<div class="menu">
+	<div class=record>record audio</div>
+	<div class=upload>upload</div>
+</div>-->
+
+<div class=canvas></div>
+<div class="record"><a href="recording.html">RECORD</a></div>
+<!-- <div class="e"><a href="recording.html">EXPERIENCE</a></div>
+<div class="your"><a href="recording.html">YOUR CONCERT</a></div> -->
+
+
+<script type="text/javascript" src="concert_ver2.js"></script>
+
+<div class= block></div>
+
+</div>
+</body>
+</html>
