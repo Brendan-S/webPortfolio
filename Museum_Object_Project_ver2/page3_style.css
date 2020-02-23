@@ -1,0 +1,101 @@
+
+
+body{
+    width: 100vw;
+    height:4000px;
+    overflow-x: hidden;
+    background-color: black;
+    margin:0;
+    padding:0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.container1{
+    width: 100vw;
+    height:3000px;
+}
+
+
+
+.container2{
+    width: 100vw;
+    height:200px;
+
+}
+
+
+.green_1_3{
+    animation-name: spin;
+    animation-duration: 10000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+
+
+.green_2{
+    position: absolute;
+    bottom:9rem;
+    mix-blend-mode: multiply;
+}
+
+.green_2_3{
+    position: absolute;
+    transform: rotate(90deg);
+    z-index: -3;
+}
+
+.green_2_2{
+    top:9rem;
+    width:100vw;
+    height:1000px;
+    mix-blend-mode: color-burn;
+    animation-name: spin;
+    animation-duration: 8000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+
+
+
+.green_6{
+    position: absolute; 
+}
+
+.green_5{
+    position: absolute;
+
+}
+
+.green_4{
+    position: absolute;
+    bottom:8rem;
+}
+
+.green_4:hover{
+    cursor: pointer;
+    animation-name: spin;
+    animation-duration: 8000ms;
+
+}
+
+@keyframes movein{
+    0%{bottom:0rem; }
+
+    50%{bottom: 5rem;  }
+
+    100%{ bottom:0rem; }
+}
+
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
