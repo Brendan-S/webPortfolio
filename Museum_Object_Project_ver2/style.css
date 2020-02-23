@@ -1,0 +1,80 @@
+
+body{
+width: 100vw;
+height:100vh;
+overflow: hidden;
+background-color: black;
+}
+
+.grid{
+    position: relative;
+   display:grid;
+    grid-template-columns:repeat(2, 1fr);
+   width:100vw;
+   height:100vh; 
+}
+
+a {
+    text-decoration: none;
+}
+
+.innergrid{
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.title{
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 2rem;
+    color:white;
+    /*border-top:solid white 1px; 
+    border-bottom:solid white 1px; */
+    padding:0rem;
+    grid-column-start:1;
+    grid-column-end:2;
+    grid-row-start: 2;
+    grid-row-end:3;
+
+    width:200px;
+    height:400px;
+    float:right;
+    position: relative;
+}
+
+ /* .title:hover{
+    -webkit-animation-name: color_red;
+    -webkit-animation-duration: 4s;
+ } */
+
+ @keyframes color_red{
+     0%{color:black;}
+     100%{color:red;}
+ }
+
+.green4_2{
+    width:1000px;
+    height:1000px;
+    animation-name: spin;
+    animation-duration: 10000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+    top:23rem;
+    padding:0;
+    margin:0;
+    position: absolute;
+    grid-column-start:1;
+    grid-column-end:2;
+    z-index: -5;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
