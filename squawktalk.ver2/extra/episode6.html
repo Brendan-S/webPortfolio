@@ -1,0 +1,387 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.js" integrity="sha256-B/HdsqG8ejlPGk/2bEOHlCBCAcBynY0nmh9hrhOwqtQ=" crossorigin="anonymous"></script>
+</head>
+
+<style>
+
+
+   html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.body{
+display:block;
+overflow:hidden;
+}
+
+canvas{
+    position: absolute;
+  margin:0;
+padding:0;
+overflow: hidden;
+position:absolute;
+opacity: 80%;
+z-index: -3;
+}
+
+.titlepage{
+
+position: absolute;
+    height:100vh;
+    width:100vw;
+    overflow: hidden;
+    background: linear-gradient(350deg, rgba(84,115,224,1) 0%, rgba(86,188,194,1) 100%);
+ opacity: 80%;
+    z-index:-1;
+}
+
+.episode1 {
+    position:relative;
+     font-size: 8rem;
+    letter-spacing: .70rem;
+
+    font-family: Staatliches;
+    font-style: normal;
+    font-weight: normal;
+    transition:color, ease-in-out 1s;
+    color: #FFFFFF;
+   
+
+}
+
+.episode1:hover{
+    color:#EBC829;
+}
+
+.pcontainter{
+position:relative;
+width:500px;
+
+
+}
+
+.paragraph{
+    left:6.5rem;
+    position:relative;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: lighter;
+    letter-spacing: .05rem;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    transition:color, ease-in-out 1s;
+    color: #FFFFFF;
+
+}
+
+.paragraph:hover{
+    color:#EBC829;
+}
+
+.audioplayer{
+    position:relative;
+    top:8rem;
+    left:7rem;
+    width:500px;
+    z-index: 2;
+    
+}
+
+.imagecontainer{
+ 
+    top:5rem;
+    left:15rem;
+    position:absolute;
+    right:5rem;
+}
+
+.image1{
+    position: absolute;
+    border-radius: 50%;
+top:40rem;
+    height:30%;
+    width:30%;
+}
+
+
+.image2{
+    position: absolute;
+    mix-blend-mode: screen;
+    border-radius: 50%;
+top:40rem;
+left:30rem;
+transition: transform, ease-in-out 1s;
+width:7.5rem;
+height;10rem;
+}
+
+.image2:hover{
+    transform:12deg;
+}
+
+/*:root {
+  --mainColor: #D9B1D8;
+}*/
+
+a {
+  
+color:#FFFFFF;
+  text-decoration: none;
+}
+
+
+.nextEpisode{
+    position:absolute;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bolder;
+    left:1.55rem;
+    top:2.3rem;
+    letter-spacing: .09rem;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+transition: color ease-in-out 1s;
+cursor: pointer;
+     
+
+}
+
+.nextEpisode: hover{
+color:#EBC829;
+}
+.next{
+display:block;
+position:absolute;
+left:90em;  
+top:30rem;
+ height:7rem;
+ width:7rem;
+background-color:transparent;
+  border:4px;
+  border-color: #FFFFFF;
+border-radius: 50%;
+border-style:dotted;
+transition: border-color, ease-out 1s;
+transition:top , ease-in-out 1s;
+  cursor: pointer; 
+
+transition:color ease-in-out 1s;
+transition: top ease-in-out 1s;
+cursor: pointer;
+z-index: 2;
+}
+
+.next:hover{
+ 
+    color:#EBC829;
+    top:29rem;
+    z-index: 2;
+}
+
+.previous{
+display:block;
+position:absolute;
+left:65em;  
+top:30rem;
+ height:7rem;
+ width:7rem;
+background-color:transparent;
+  border:4px;
+  border-color: #FFFFFF;
+border-radius: 50%;
+border-style:dotted;
+transition: border-color, ease-out 1s;
+transition:top , ease-in-out 1s;
+  cursor: pointer; 
+
+transition:color ease-in-out 1s;
+transition: top ease-in-out 1s;
+cursor: pointer;
+z-index: 2;
+}
+
+.previous:hover{
+color:#EBC829;
+    top:29rem;
+    z-index: 2;
+}
+
+.previousEpisode{
+    position:absolute;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bolder;
+    left:.5rem;
+    top:2.3rem;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    transition: color ease-in-out 1s;
+    cursor: pointer;
+}
+
+.previousEpisode: hover{
+color:;
+}
+
+.home{
+display:block;
+position:absolute;
+left:77.3em;  
+top:30rem;
+ height:7rem;
+ width:7rem;
+background-color:transparent;
+  border:4px;
+  border-color: #FFFFFF;
+border-radius: 50%;
+border-style:dotted;
+transition: border-color, ease-out 1s;
+transition:top , ease-in-out 1s;
+  cursor: pointer; 
+
+transition:color ease-in-out 1s;
+transition: top ease-in-out 1s;
+cursor: pointer;
+z-index: 2;
+}
+.home:hover{
+color:#EBC829;
+    top:29rem;
+    z-index: 2;
+}
+
+.mainMenue{
+position:absolute;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bolder;
+    left:1.6rem;
+    top:2.3rem;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    transition: color ease-in-out 1s;
+    cursor: pointer;
+}
+
+.mainMenue:hover{
+
+}
+
+/*.wrapper{
+    left:50rem;
+    top:5rem;
+    width:40rem;
+    height:40rem;
+    position: absolute;
+  border-color: #FFFFFF;
+  background-color: transparent;
+border-radius: 50%;
+border-style:dotted;
+transition: border-color, ease-in-out 1s;
+transition:top , ease-in-out 1s;
+}
+
+.wrapper:hover{
+  border-color:#E3EA96;
+  top:.5rem;
+}*/
+
+.ep8{
+  display:inline-block;
+position:relative;
+left:12em;  
+top:5rem;
+ height:50rem;
+ width:50rem;
+background-color:transparent;
+  border:4px;
+  border-color: #FFFFFF;
+border-radius: 50%;
+border-style:dotted;
+transition: border-color, ease-out 1s;
+transition:top , ease-in-out 1s;
+  cursor: pointer; 
+
+  }
+
+.ep8:hover{
+  border-color:#EBC829;
+  top:3rem;
+}
+
+.topics{
+    bottom:50rem;
+left:58rem;
+position: absolute;
+color:white;
+font-family: Staatliches;
+font-size: 4rem;
+}
+
+</style>
+
+
+<body>
+      <div class=titlepage data-section-name="home">
+
+              <div class="ep8" id="episode8" onmouseover="colorChange()" onmouseout="colorRemove()">
+                  <div class="episode1" id="title">Your Art Career</div>
+
+                  <div class="paragraph" id="summary">
+                    <p>Brendan and Becki talk about their summer plans. 
+                    <br>How to prepare yourself for your next year in school 
+                    <br>and how to maintain mental health.</p>
+                  </div>      
+                  <audio class=audioplayer controls=controls src="brendanBecki.mp3" type="audio/mp3"></audio>
+          
+              </div>    
+                
+            <div class="next" id="nextID" onmouseover="nextColor()" onmouseout="nextRemove()">
+              <a href="episode7.html">
+                <div class="nextEpisode" id="next">next</div>
+              </a>
+            </div>
+                
+            <div class="previous" id="previousID" onmouseover="previousColor()" onmouseout="previousRemove()">
+              <a href="episode5.html">    
+                <div class="previousEpisode" id="previous">previous</div>
+              </a>
+            </div>
+
+            <div class="home"  id="homeID" onmouseover="homeColor()" onmouseout="homeRemove()">
+               <a href="episodelib.html">    
+                <div class="mainMenue"  id="home1">home</div>
+              </a>
+            </div>
+
+</div>
+<script type="text/javascript" src="episode1.js"></script>
+<script type="text/javascript" src="episode-6.js"></script>
+</body>
+
+
+
+</html>
