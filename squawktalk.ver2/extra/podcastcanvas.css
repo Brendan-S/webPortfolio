@@ -1,0 +1,16 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+  
+  width:1600px; 
+  height:1000px
+}
+
+page {
+  width:1000px; 
+  height:1000px;
+  background-color:#FFFFFF;
+}
