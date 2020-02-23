@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.js" integrity="sha256-B/HdsqG8ejlPGk/2bEOHlCBCAcBynY0nmh9hrhOwqtQ=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400&display=swap" rel="stylesheet">
+  
+</head>
+
+<style>
+body{
+	width:100%;
+	height:100vh;
+	background-color: black;
+	margin:0;
+	padding:0;
+	overflow: hidden;
+}
+
+a {
+
+  position: absolute;
+color:#FFFFFF;
+  text-decoration: none;
+background-color: black;
+border-radius: 5px;
+width:7rem;
+/* border:white 1px solid; */
+background-color: black;
+font-family:'Roboto', sans-serif;
+font-size:1.5rem; 
+-webkit-transition: hue, ease-in .5s;
+
+ }
+
+ a:hover{
+ color:#FF00E6;
+ /* border-color: #FF00E6; */
+
+ }
+
+.instructions{
+	position: absolute;
+color:white;
+font-family:'Roboto', sans-serif;
+font-size:5rem; 
+
+top:7rem;
+left:37rem;
+
+}
+
+.capture:hover{
+	position: absolute;
+	color:#FF00E6;
+border-radius: 5px;
+width:5rem;
+border-color: #FF00E6;
+font-family:'Roboto', sans-serif;
+font-size:1.5rem; 
+-webkit-transition: hue, ease-in .5s;
+}
+
+.info{
+	position: absolute;
+color:white;
+font-family:'Roboto', sans-serif;
+font-size:1.5rem; 
+width:28rem;
+top:18rem;
+left:37rem;
+line-height: 2.5rem;
+}
+
+
+.record{
+	position: absolute;
+color:white;
+border-radius: 5px;
+width:7rem;
+
+font-family:'Roboto', sans-serif;
+font-size:1.5rem; 
+-webkit-transition: hue, ease-in .5s;
+top:40rem;
+left:57rem;
+
+}
+
+.home{
+position: absolute;
+top:40rem;
+left:37rem;
+
+}
+
+
+</style>
+
+
+
+
+<body>
+
+<div class=home><div>
+	<a href="concert_home.html">landing</a>
+</div></div>
+
+<div class="record">
+	<a href="recording.html">recording</a>
+</div>
+
+<div class=instructions>Instructions</div>
+	<div class=info>Use your device to get the most out of your concert experiance. Turn it on and let the built-in microphone do work! After several minutes you'll have you're own unique sound drawing.</div>
+
+<script type="text/javascript" src="instructions.js"></script>
+
+
+
+</body>
+</html>
