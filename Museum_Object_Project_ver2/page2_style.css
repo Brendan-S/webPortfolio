@@ -1,0 +1,144 @@
+
+
+body{
+    width: 100vw;
+    height:8000px;
+    overflow-x: hidden;
+    background-color: black;
+    margin:0;
+    padding:0;
+}
+
+.container{
+    
+    height:3000px;
+    padding:0;
+    width:100vw;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows:repeat(8, 1fr); 
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.green_3-3{
+    right:10rem;
+}
+
+.green_3_2{
+    width:700px;
+    height:800px;
+    z-index:2;
+}
+
+.green_3_2:hover{
+    -webkit-animation-name: example;
+  -webkit-animation-duration: 3s; 
+}
+
+ @keyframes example {
+     0% {transform: rotate(0deg);}
+     50%{transform: rotate(20deg);}
+    100% { transform:rotate(30deg);}       
+ }
+
+ .green_4{
+     border-radius: 50%;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear; 
+ }
+
+ .green_4:hover{
+   -webkit-animation-name: color_red;
+    -webkit-animation-duration: 3s; 
+    cursor: pointer;
+    mix-blend-mode: color-dodge;
+ }
+
+@keyframes color_red{
+    0%{background-color: black;}
+    50%{background-color: rgb(134, 0, 0);}
+    100%{background-color: red;}
+}
+
+.green_4_2{
+    width:1000px;
+    height:1000px;
+    animation-name: spin;
+    animation-duration: 10000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+    top:23rem;
+    padding:0;
+    margin:0;
+    position: absolute;
+    grid-column-start:1;
+    grid-column-end:2;
+    z-index: -5;
+}
+
+.green_4_3{
+    width:700px;
+    height:700px;
+    animation-name: spin;
+    animation-duration: 10000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+    top:63rem;
+    padding:0;
+    margin:0;
+    position: absolute;
+    grid-column-start:1;
+    grid-column-end:2;
+    z-index: -5;
+}
+
+.green_4_4{
+    width:700px;
+    height:700px;
+    animation-name: spin;
+    animation-duration: 10000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+    top:73rem;
+    left:6rem;
+    padding:0;
+    margin:0;
+    position: absolute;
+    grid-column-start:1;
+    grid-column-end:2;
+    z-index: -5;
+}
+
+.green_4_5{
+    width:700px;
+    height:700px;
+    animation-name: spin;
+    animation-duration: 10000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+    top:83rem; 
+    left:10rem;      
+    padding:0;
+    margin:0;
+    position: absolute;
+    grid-column-start:1;
+    grid-column-end:2;
+    z-index: -5;
+}
+
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
+
+
