@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+  
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<style>
+
+    html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+   
+}
+
+
+.body{
+display:inline;
+overflow-x:hidden;
+margin:0;
+padding:0;
+border:0;
+color:lightblue;
+
+
+}
+
+canvas{
+  margin:0;
+padding:0;
+overflow-x: hidden;
+position:absolute;
+top:0rem;
+opacity: 50%;
+z-index: -2;
+}
+/*:root {
+  --mainColor: #2E7E95;
+}*/
+
+[aos="fade"] {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+[aos="fade"].aos-animate {
+  opacity: 1;
+}
+
+a {
+  
+color:#FFFFFF;
+  text-decoration: none; 
+}
+
+/*a:hover {
+  /*background-size: 4px 50px;
+}*/
+
+
+ul {
+     display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    list-style: none;
+    list-style-position: initial;
+    list-style-image: initial;
+    list-style-type: none;
+}
+
+.episodelist{
+    height:3800px; /*15,520=970*4 4pages of 970pixles by height  #7B9CE3 #5473E0  */
+   width:100vw;
+    overflow-x: hidden;
+    margin:0;
+    padding:0;
+    background: linear-gradient(350deg, rgba(84,115,224,1) 0%, rgba(86,188,194,1) 100%);
+    opacity: 80%;
+    z-index:-1;
+   
+
+}
+
+.return{
+  display:inline-block;
+position: absolute;
+left:60rem;  
+top:10rem;
+ height:10rem;
+ width:10rem;
+background-color:transparent;
+  border:5px;
+  border-color: #FFFFFF;
+border-radius: 50%;
+border-style:dotted;
+ transition: border-color, ease-out 1s; 
+transition:top , ease-in-out 1s;
+  cursor: pointer; 
+
+  }
+
+.return:hover{
+  border-color:#E3EA96; 
+  top:6rem;
+
+} 
+
+#returnID{
+left:1rem; 
+}
+
+.returnTitle{
+
+  font-size:4rem;
+  font-family: Staatliches;
+  color:white;
+
+}
+
+.ep1{
+  display:inline-block;
+position:relative;
+left:10rem;  
+top:10rem;
+ height:31rem;
+ width:31rem;
+background-color:transparent;
+  border:8px;
+  border-color: #FFFFFF;
+border-radius: 50%;
+border-style:dotted;
+ transition: border-color, ease-out 1s; 
+transition:top , ease-in-out 1s;
+  cursor: pointer; 
+
+  }
+
+.ep1:hover{
+  border-color:#E3EA96; 
+  top:6rem;
+}
+
+.title1{
+  font-size:8rem;
+  font-family: Staatliches;
+  color:white;
+  transition: color ease-in-out 1s;
+}
+
+.title1:hover{
+  color:yellow;
+}
+
+.ep2{
+  display:block;
+position:relative;
+left:58rem;  
+top:10rem;
+ height:30rem;
+ width:30rem;
+background-color:transparent;
+  border:8px;
+  border-color: #FFFFFF;
+border-radius: 50%;
+border-style:dotted;
+transition: border-color, ease-out 1s;
+transition:top , ease-in-out 1s;
+  cursor: pointer; 
+  text-align: left;
+
+  }
+
+.ep2:hover{
+  border-color:yellow;
+  top:6rem;
+}
+
+.title2{
+  font-size:8rem;
+  font-family: Staatliches;
+  color:white;
+  transition: color ease-in-out 1s;
+  width:500px;
+}
+
+.title2:hover{
+  top:2rem;
+  color:yellow;
+}
+
+
+
+.ep3{
+  display:inline-block;
+position:relative;
+left:10rem;  
+top:4rem;
+ height:30rem;
+ width:30rem;
+background-color:transparent;
+  border:8px;
+  border-color: #FFFFFF;
+border-radius: 50%;
+border-style:dotted;
+transition: border-color, ease-out 1s;
+transition:top , ease-in-out 1s;
+  cursor: pointer; 
+
+  }
+
+.ep3:hover{
+border-color:#E3EA96;
+  top:2rem;
+}
+
+.title3{
+  left:4rem;
+  font-size:8rem;
+  font-family: Staatliches;
+  color:white;
+  transition: color ease-in-out 1s;
+  
+}
+
+.title3:hover{
+  color:yellow;
+}
+
+.fling{
+  position:relative;
+left:4rem;
+  font-size:8rem;
+  font-family: Staatliches;
+  color:white;
+  transition: color ease-in-out 1s;
+}
+.fling:hover{
+  color:yellow;
+}
+
+
+.ep4{
+  display:inline-block;
+position:relative;
+left:30rem;  
+top:30rem;
+ height:30rem;
+ width:30rem;
+background-color:transparent;
+  border:8px;
+  border-color: #FFFFFF;
+border-radius: 50%;
+border-style:dotted;
+transition: border-color, ease-out 1s;
+text-decoration-color:ease-in-out 1s;
+transition:top , ease-in-out 1s;
+  cursor: pointer; 
+
+  }
+
+.ep4:hover{
+  text-decoration-color: #E3EA96;
+  border-color:#E3EA96;
+  top:27rem;
+}
+
+.title4{
+  left:4rem;
+  font-size:8rem;
+  font-family: Staatliches;
+  color:white;
+  transition: color ease-in-out 1s;
+}
+
+.title4:hover{
+  color:green;
+}
+
+
+.ep5{
+  display:inline-block;
+position:relative;
+right:40rem;  
+top:60rem;
+ height:30rem;
+ width:30rem;
+background-color:transparent;
+  border:8px;
+  border-color: #FFFFFF;
+border-radius: 50%;
+border-style:dotted;
+transition: border-color, ease-out 1s;
+transition:top , ease-in-out 1s;
+  cursor: pointer; 
+
+  }
+
+.ep5:hover{
+  border-color:#E3EA96;
+  top:57rem;
+}
+
+.title5{
+  position: absolute;
+  top:5rem;
+  left:8rem;
+  font-size:8rem;
+  font-family: Staatliches;
+  color:white;
+  transition: color ease-in-out 1s;
+}
+
+.title5:hover{
+  color:green;
+}
+
+.ep6{
+  display:inline-block;
+position:relative;
+left:10rem;  
+top:55rem;
+ height:30rem;
+ width:30rem;
+background-color:transparent;
+  border:8px;
+  border-color: #FFFFFF;
+border-radius: 50%;
+border-style:dotted;
+transition: border-color, ease-out 1s;
+transition:top , ease-in-out 1s;
+  cursor: pointer; 
+
+  }
+
+.ep6:hover{
+  border-color:#E3EA96;
+  top:53rem;
+}
+
+.title6{
+  position: absolute;
+  top:4rem;
+  left:3.7rem;
+  font-size:8rem;
+  font-family: Staatliches;
+  color:white;
+  transition: color ease-in-out 1s;
+  
+}
+
+.title6:hover{
+  color:yellow;
+}
+
+.ep7{
+  display:inline-block;
+position:relative;
+left:20rem;  
+top:64rem;
+ height:30rem;
+ width:30rem;
+background-color:transparent;
+  border:8px;
+  border-color: #FFFFFF;
+border-radius: 50%;
+border-style:dotted;
+transition: border-color, ease-out 1s;
+transition:top , ease-in-out 1s;
+  cursor: pointer; 
+
+  }
+
+.ep7:hover{
+  border-color:#E3EA96;
+  top:62rem;
+}
+
+.title7{
+  left:4rem;
+  font-size:8rem;
+  font-family: Staatliches;
+  color:white;
+  transition: color ease-in-out 1s;
+  
+}
+
+.title7:hover{
+  color:yellow;
+}
+
+.ep8{
+  display:inline-block;
+position:relative;
+right:50rem;  
+top:90rem;
+ height:30rem;
+ width:30rem;
+background-color:transparent;
+  border:8px;
+  border-color: #FFFFFF;
+border-radius: 50%;
+border-style:dotted;
+transition: border-color, ease-out 1s;
+transition:top , ease-in-out 1s;
+  cursor: pointer; 
+
+  }
+
+.ep8:hover{
+  border-color:#E3EA96;
+  top:87rem;
+}
+
+.title8{
+  position: absolute;
+  left:4rem;
+  font-size:8rem;
+  font-family: Staatliches;
+  color:white;
+  transition: color ease-in-out 1s;
+  
+}
+
+.title8:hover{
+  color:yellow;
+}
+
+/*.circle1{
+display:inline-block;
+position:relative;
+left:rem;  
+top:2rem;
+ height:30rem;
+ width:30rem;
+background-color:transparent;
+  border:6px;
+  border-color: #FFFFFF;
+border-radius: 50%;
+border-style:dotted;
+transition: border-color, ease-out 1s;
+transition:top , ease-in-out 1s;
+  cursor: pointer; 
+
+}
+
+.circle:hover{
+color:blue;
+}
+
+.word{
+  position:absolute;
+left:4rem;
+  font-size:8rem;
+  font-family: Staatliches;
+  color:white;
+  transition: color ease-in-out 1s;
+}
+
+.word:hover{
+
+}*/
+
+
+</style>
+
+
+<body>  
+
+
+        <div class="episodelist">
+               
+               <!--<div class="circle1">
+                 <a href="landingpage.html"><div class="word" >Title</a>
+               </div>-->
+
+               <div class="return" id="return1" onmouseover="returnColor()"  onmouseout="removeColor()">
+                  <div class="returnTitle">
+                    <a href="landingpage.html" id="returnID"> landing Page</a>
+                  </div>
+               </div>
+                    
+                <div class="ep1"  id="episode1" onmouseover="colorChange1()" onmouseout="colorRemove1()"> 
+                  <div class="title1">
+                    <a href="episode1.html" id="episode1ID"> Art School <br>Adventure<br></a>
+                  </div>
+                </div>  
+
+                <div class="ep2" id="episode2" onmouseover="colorChange2()" onmouseout="colorRemove2()">
+                  <div class="title2"><a href="episode2.html" id="episode2ID">Boys and Booze</a></div>
+                </div>
+
+                <div class="ep3" id="episode3" onmouseover="colorChange3()" onmouseout="colorRemove3()">
+                  <div class="title3"><a href="episode3.html" class="episode3Class">Summer <br> Fling</a></div>
+                  <!-- <div class="fling"><a href="episode3.html" class="episode3Class"></a></div> -->
+
+                </div>
+
+                <div class="ep4" id="episode4" onmouseover="colorChange4()"  onmouseout="colorRemove4()">
+                  <div class="title4"><a href="episode4.html" id="episode4ID">Bionicle Group Fun</a></div>
+                </div>
+
+                <div class="ep5" id="episode5" onmouseover="colorChange5()" onmouseout="colorRemove5()">
+                  <div class="title5"><a href="episode5.html" id="episode5ID">Serving The Tea </a></div>
+                </div>
+
+                <div class="ep6" id="episode6" onmouseover="colorChange6()"  onmouseout="colorRemove6()">
+                  <div class="title6"><a href="episode6.html" id="episode6ID"> Your Art Career</a> </div>
+                </div>
+
+                <div class="ep7" id="episode7" onmouseover="colorChange7()"  onmouseout="colorRemove7()">
+                  <div class="title7"><a href="episode7.html" id="episode7ID">Stand-Up Routine </a></div>
+                </div>
+
+                <div class="ep8" id="episode8" onmouseover="colorChange8()"  onmouseout="colorRemove8()">
+                  <div class="title8"><a href="episode8.html" id="episode8ID"> Maegan <br>In Rome </a></div>
+                </div>
+
+
+
+           
+                    <!-- <div class="ninfo"data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"><p></p></div>
+                    <div class="binfo"data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"></div>
+                    <img class="natalie" src="podcastImages/natalie.png">
+                    <img class="brendan" src="podcastImages/brendan.png">
+                    <p>From the midwest. Likes bacon, both the food, and his neighbor's dog.</p>--> 
+       </div>     
+ <script type="text/javascript" src="episodelib.js"></script>
+ <script type="text/javascript" src="episode_Lib.js"></script>
+</body>
+
+</html>
