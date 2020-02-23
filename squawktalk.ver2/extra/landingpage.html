@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.js" integrity="sha256-B/HdsqG8ejlPGk/2bEOHlCBCAcBynY0nmh9hrhOwqtQ=" crossorigin="anonymous"></script>
+</head>
+
+<style>
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+   
+}
+
+[aos="fade"] {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+[aos="fade"].aos-animate {
+  opacity: 1;
+}
+
+
+
+.body{
+display:block;
+overflow:hidden;
+margin:0;
+padding:0;
+border:0;
+vertical-align: baseline;
+color:lightblue;
+
+}
+
+.titlepage{
+
+position: absolute;
+	height:1880px;
+    width:100vw;
+    overflow: hidden;
+    background: linear-gradient(350deg, rgba(84,115,224,1) 0%, rgba(86,188,194,1) 100%);
+ opacity: 80%;
+    z-index:-1;
+}
+
+canvas{
+	position: absolute;
+  margin:0;
+padding:0;
+overflow: hidden;
+position:absolute;
+top:0rem;
+opacity: 55%;
+z-index: -2;
+}
+
+
+a {
+  text-decoration: none; 
+}
+
+
+.squawk{
+margin: 0rem;
+padding: 0rem;
+position: relative;
+
+grid-column-start:1;
+grid-column-end:1;
+grid-row-start:1;
+
+top: 8rem;
+right:1.5rem;
+
+font-family: Staatliches;
+font-style: normal;
+font-weight: normal;
+font-size: 30rem;
+line-height: 10rem;
+letter-spacing: 3.5rem;
+color:white;
+
+
+}
+
+.talk{
+
+padding: 0rem;
+margin: 0rem;
+position: relative;
+
+top:26rem;
+left:20rem;
+
+font-family: Staatliches;
+font-style: normal;
+font-weight: normal;
+font-size: 35rem;
+line-height: 10rem;
+color:white;
+
+}
+
+.subtitle{
+position: relative;
+
+top:34rem;
+left:25rem;
+
+font-family:Staatliches;
+font-style: normal;
+font-weight: normal;
+font-size: 1.60rem;
+line-height: 1rem;
+letter-spacing: .70rem;
+color:white;
+}
+
+
+.info{
+	left:30rem;
+	top:65rem;
+	width:35rem;
+	height:30rem;
+	font-family: 'Open Sans', sans-serif;
+position: absolute;
+font-style: normal;
+font-weight: normal;
+font-size: 1.5rem;
+
+letter-spacing:.05rem;
+color:white;
+background-color:rgba(86,188,194,1) 100% ;
+
+}
+
+
+
+.circle1{
+	display:block;
+position:absolute;
+right:50rem;  
+top:60rem;
+ height:30rem;
+ width:30rem;
+background-color:transparent;
+  border:4px;
+  border-color: #FFFFFF;
+border-radius: 50%;
+border-style:dotted;
+transition: border-color, ease-out 1s;
+transition:top , ease-in-out 1s;
+  cursor: pointer; 
+opacity: 40%;
+}
+
+
+.continue{
+	display:block;
+position:absolute;
+right:30rem;  
+top:90rem;
+ height:20rem;
+ width:20rem;
+background-color:transparent;
+  border:4px;
+  border-color: #FFFFFF;
+border-radius: 50%;
+border-style:dotted;
+transition: border-color, ease-out 1s;
+transition:top , ease-in-out 1s;
+  cursor: pointer; 
+
+}
+
+
+.continue:hover{
+	border-color:#F0A136;
+	top:89;
+}
+
+.episodelist{
+	position: absolute;
+	left:4rem;
+	top:8rem;
+font-size:4rem;
+  font-family: Staatliches;
+  color:white;
+  transition: color ease-in-out 1s;
+  
+}
+
+#archive{
+  transition: color ease-in-out 1s;
+}
+
+/* #archive:hover{
+  color:#F0A136;
+} */
+
+.episodelist:hover{
+	color:#F0A136;
+}
+
+</style>
+
+
+
+<body>
+	<div class="titlepage">
+
+ 					<div class=squawk>SQUAWK</div>
+                     <div class=talk>TALK</div>
+                     <div class=subtitle>The Art School Podcast</div>
+<div class="info"  data-aos="fade-down" data-aos-anchor-placement="bottom-bottom" >What is Squawk Talk? Squawk Talk is the leading art school podcast hosted by none other than Natalie and Brendan from RISD's illustration department. <br> <br>We update our audience with the latest bits of information on life at Art school. As students, the art school lifestyle is our bread and butter, our episodes are rich with information <br>you won't find elsewhere!</div>
+
+<div class="circle1"></div></a>
+
+<a href="episodelib.html"><div class="continue" onmouseover="wordColor()"  onmouseout="colorRemove()">
+	<div class="episodelist" ><p id="archive">archive</p></div>
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+      AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+    </script>
+
+<script type="text/javascript" src="landingpage.js"></script> 
+<script type="text/javascript" src="landing_Page.js"></script>
+</body>
+</html>
