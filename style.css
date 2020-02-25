@@ -283,12 +283,12 @@ cursor:pointer;
  
     /* border: solid 1px black; */
     background-color: #EC5050;  
-    grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-start: 4;
+    grid-column-end: 8;
     grid-row-start: 3;
     grid-row-end:4;
     cursor:pointer; 
-    left:4rem;
+    /* left:4rem; */
     transition-duration: 3s;
     }
 
@@ -310,11 +310,11 @@ cursor:pointer;
      
         /* border: solid 1px black;  */
         background-color: #86BC6D; 
-        grid-column-start: 5; 
-        grid-column-end: 8;
+        grid-column-start: 7; 
+        grid-column-end: 10;
         grid-row-start: 3;
         grid-row-end:4;
-        left:4rem;
+        /* left:4rem; */
         cursor:pointer; 
         transition-duration: 3s;
     }
