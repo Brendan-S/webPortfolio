@@ -109,15 +109,15 @@ a:link, a:visited {
 #home{
     grid-column-start: 3;
     grid-column-end: 3;
-    grid-row-start: 11;
-    grid-row-end: 11;
+    grid-row-start: 10;
+    grid-row-end: 12;
 }
 
 #enter{
     grid-column-start: 5;
     grid-column-end: 5;
-    grid-row-start: 11;
-    grid-row-end: 11;
+    grid-row-start: 10;
+    grid-row-end: 12;
 }
 
 
