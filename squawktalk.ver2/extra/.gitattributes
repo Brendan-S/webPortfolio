@@ -1,0 +1,9 @@
+.mp3 filter=lfs diff=lfs merge=lfs -text
+brendanBecki.mp3 filter=lfs diff=lfs merge=lfs -text
+brendanNatalie.mp3 filter=lfs diff=lfs merge=lfs -text
+clitChat.mp3 filter=lfs diff=lfs merge=lfs -text
+michaelMolly.mp3 filter=lfs diff=lfs merge=lfs -text
+natashaVienna.mp3 filter=lfs diff=lfs merge=lfs -text
+sarah.mp3 filter=lfs diff=lfs merge=lfs -text
+amanda.mp3 filter=lfs diff=lfs merge=lfs -text
+brendanMaegan.wav filter=lfs diff=lfs merge=lfs -text
