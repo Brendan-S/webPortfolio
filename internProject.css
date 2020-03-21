@@ -858,7 +858,7 @@ a:link, a:visited {
 .containerOne{
     grid-column-start:1 ;
     grid-column-end: 13;
-    grid-row-start:2;
+    grid-row-start:1;
     grid-row-end:13; 
     display:grid; 
     width:100%;
@@ -883,7 +883,7 @@ a:link, a:visited {
     grid-row-end:2;
     display:grid; 
     width:100vw;
-    height:90%; 
+    height:40px; 
     overflow-x: hidden;
     margin:0;
     padding:0;
