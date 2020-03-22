@@ -83,6 +83,8 @@ a:link, a:visited {
     position: relative;
     grid-row-start: 1;
     grid-row-end: 3;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
     
 }
 
@@ -93,6 +95,8 @@ a:link, a:visited {
     grid-column-end:10; 
     grid-row-start: 6;
     grid-row-end: 11;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
     
 }
 
@@ -107,6 +111,8 @@ a:link, a:visited {
     transition-duration: ease-in-out, 4s;
     cursor:pointer;
     transition-timing-function: ease-in-out 1s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
 .return:hover{
@@ -126,6 +132,8 @@ a:link, a:visited {
     grid-column-end: 5;
     grid-row-start: 11;
     grid-row-end: 11;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
 
@@ -349,13 +357,13 @@ display:block;
             
         }
         .summaryOne{
-            display:block;
+            display:none;
             position: relative;
             grid-column-start: 3;
             grid-column-end:10; 
             grid-row-start: 6;
             grid-row-end: 11;
-           
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-size: 0.75rem;
         }
         
@@ -366,7 +374,7 @@ display:block;
             grid-column-end:10; 
             grid-row-start: 6;
             grid-row-end: 11;
-           
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-size: 0.75rem;
         }
         
@@ -485,14 +493,25 @@ display:block;
         
     }
     
-    .summary{
+    .summaryOne{
+        display:none;
+        position: relative;
+        grid-column-start: 3;
+        grid-column-end:10; 
+        grid-row-start: 6;
+        grid-row-end: 11;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 0.7rem;
+    }
+
+    .summaryTwo{
         display:block;
         position: relative;
         grid-column-start: 3;
         grid-column-end:10; 
         grid-row-start: 6;
         grid-row-end: 11;
-      
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-size: 0.7rem;
     }
     
@@ -647,7 +666,7 @@ a:link, a:visited {
     grid-column-end:10; 
     grid-row-start: 4;
     grid-row-end: 11;
-    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size:0.65rem; 
     
 }
