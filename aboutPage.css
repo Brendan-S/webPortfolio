@@ -674,6 +674,7 @@ body{
 
     body{
         width: 100vw;
+        height:100vh; 
         margin:0;
         padding:0; 
         overflow-x: hidden;
@@ -753,7 +754,7 @@ body{
         height:100%;
         grid-column-start:3;
         grid-column-end:10;
-        grid-row-start:6;
+        grid-row-start:7;
         grid-row-end:7;
         
     }
@@ -762,8 +763,8 @@ body{
     #bioPhoto{
         display:block; 
         position:relative;
-        width: 90%; 
-        height:90%;
+        width: 50%; 
+        height:50%;
        
       
     
@@ -775,7 +776,6 @@ body{
     }
 
     .resumeOne{
-        top:1rem;
         display:block; 
         position: relative;
         grid-column-start:3;
@@ -802,7 +802,6 @@ body{
     }
     
     #contactOne{
-        top:1rem;
         display:block; 
         position: relative;
         grid-column-start:5;
