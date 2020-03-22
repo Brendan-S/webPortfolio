@@ -765,9 +765,6 @@ body{
         position:relative;
         width: 50%; 
         height:50%;
-       
-      
-    
     }
 
 
@@ -776,6 +773,7 @@ body{
     }
 
     .resumeOne{
+        bottom:2rem;
         display:block; 
         position: relative;
         grid-column-start:3;
@@ -802,6 +800,7 @@ body{
     }
     
     #contactOne{
+        bottom:2rem;
         display:block; 
         position: relative;
         grid-column-start:5;
