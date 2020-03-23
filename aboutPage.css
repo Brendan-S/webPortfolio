@@ -776,7 +776,7 @@ body{
     } */
 
     .resumeOne{
-        bottom:2rem;
+        bottom:5rem;
         display:block; 
         position: relative;
         grid-column-start:3;
@@ -803,7 +803,7 @@ body{
     }
     
     #contactOne{
-        bottom:2rem;
+        bottom:5rem;
         display:block; 
         position: relative;
         grid-column-start:5;
