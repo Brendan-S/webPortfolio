@@ -781,8 +781,8 @@ body{
         position: relative;
         grid-column-start:3;
         grid-column-end:3;
-        grid-row-start:3;
-        grid-row-end:4;
+        grid-row-start:2;
+        grid-row-end:2;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
@@ -808,8 +808,8 @@ body{
         position: relative;
         grid-column-start:5;
         grid-column-end:6;
-        grid-row-start:3;
-        grid-row-end:4;
+        grid-row-start:2;
+        grid-row-end:2;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
        
 
