@@ -72,8 +72,8 @@ overflow:hidden;
 .One{
     display:block; 
     position:relative;
-    width: 100%; 
-    height:100%;
+    width: 550px; 
+    height:750px;
     grid-column-start:3;
     grid-column-end:10;
     grid-row-start:2;
@@ -90,9 +90,9 @@ overflow:hidden;
 }
 
 
-.imageContainer1{
+/* .imageContainer1{
     display: block;
-}
+} */
 
 #contactOne{
     top:1rem; 
@@ -299,8 +299,8 @@ body{
 .One{
     display:block; 
     position:relative;
-    width: 100%; 
-    height:100%;
+    width: 430px; 
+    height:600px;
     grid-column-start:3;
     grid-column-end:10;
     grid-row-start:2;
@@ -317,9 +317,9 @@ body{
 }
 
 
-.imageContainer1{
+/* .imageContainer1{
     display: block;
-}
+} */
 
 
 #contactOne{
@@ -520,8 +520,8 @@ body{
     .One{
         display:block; 
         position:relative;
-        width: 100%; 
-        height:100%;
+        width: 350px; 
+        height:560px;
         grid-column-start:3;
         grid-column-end:10;
         grid-row-start:2;
@@ -538,9 +538,9 @@ body{
     }
 
 
-    .imageContainer1{
+    /* .imageContainer1{
         display: block;
-    }
+    } */
     
     #contactOne{
         top:1rem; 
@@ -776,13 +776,13 @@ body{
     } */
 
     .resumeOne{
-        bottom:5rem;
+       top:2rem; 
         display:block; 
         position: relative;
         grid-column-start:3;
         grid-column-end:3;
-        grid-row-start:2;
-        grid-row-end:2;
+        grid-row-start:3;
+        grid-row-end:3;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
@@ -803,13 +803,13 @@ body{
     }
     
     #contactOne{
-        bottom:5rem;
+        top:2rem; 
         display:block; 
         position: relative;
         grid-column-start:5;
         grid-column-end:6;
-        grid-row-start:2;
-        grid-row-end:2;
+        grid-row-start:3;
+        grid-row-end:3;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
        
 
